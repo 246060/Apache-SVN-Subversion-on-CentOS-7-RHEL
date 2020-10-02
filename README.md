@@ -15,12 +15,15 @@ firewall-cmd --reload
 systemctl start httpd
 ```
 
+<br/>
+
 ## 2. Installing Subversion
 
 ```bash
 yum -y install subversion subversion-tools mod_dav_svn
 ```
 
+<br/>
 
 ## 3. Configuring Subversion
 
@@ -36,6 +39,8 @@ chcon -R -t httpd_sys_content_t /svn/first-repo/
 chcon -R -t httpd_sys_rw_content_t /svn/first-repo/
 ```
 
+
+<br/>
 
 ## 4. Configuring Apache Server
 
@@ -91,6 +96,8 @@ htpasswd -cm /etc/subversion/svn.users user0
 systemctl reload httpd.service
 ```
 
+
+<br/>
 
 ## 6. Testing Subversion
 
